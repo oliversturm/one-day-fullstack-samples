@@ -6,16 +6,6 @@ export default {
     CUSTOMER_CREATED: ({ storage }, { aggregateId, payload: { name } }) =>
       storage.insertOne('customers', { id: aggregateId, name }),
 
-    CUSTOMER_UPDATED: ({ storage }, { aggregateId, payload: { name } }) =>
-      Promise.all([
-        storage.updateOne('customers', { id: aggregateId }, { $set: { name } }),
-        storage.updateMany(
-          'overview',
-          { customerId: aggregateId },
-          { $set: { customerName: name } }
-        ),
-      ]),
-
     ORDER_CREATED: (
       { storage, sideEffects, commands },
       { aggregateId, payload: { customerId, text, value } }
