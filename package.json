@@ -58,7 +58,9 @@
     "pm2": "pm2",
     "http": "node demos/complete/packages/fullstack-demo-http-client/index.js",
     "react:dev:complete": "vite serve demos/complete/packages/frontend-react",
-    "svelte:dev:complete": "PREFIX=demos/complete CACHE_POSTFIX=demos-complete svelte-kit dev"
+    "svelte:dev:complete": "PREFIX=demos/complete CACHE_POSTFIX=demos-complete svelte-kit dev",
+    "react:dev:block2": "vite serve demos/block2/packages/frontend-react",
+    "svelte:dev:block2": "PREFIX=demos/block2 CACHE_POSTFIX=demos-block2 svelte-kit dev"
   },
   "type": "module",
   "browserslist": {

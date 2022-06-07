@@ -1,9 +1,15 @@
 import adapter from '@sveltejs/adapter-auto';
 
-const { PREFIX, CACHE_POSTFIX } = process.env;
+let { PREFIX, CACHE_POSTFIX } = process.env;
 
 if (!PREFIX || !CACHE_POSTFIX) {
-  throw new Error('PREFIX/CACHE_POSTFIX are not set.');
+  // We should throw an exception here to indicate that the startup
+  // process is not configured correctly. However, it turns out that
+  // this confuses the Svelte integration in VS Code (it shows the
+  // exception message for any script tag in any component...). So we set
+  // default values instead which point into the "complete" demo.
+  PREFIX = 'demos/complete';
+  CACHE_POSTFIX = 'demos-complete';
 }
 
 /** @type {import('@sveltejs/kit').Config} */
