@@ -52,6 +52,9 @@
   },
   "scripts": {
     "start:complete": "pm2 start pm2.complete.config.cjs",
+    "start:block1": "pm2 start pm2.block1.config.cjs",
+    "start:lab1:start": "pm2 start pm2.lab1-start.config.cjs",
+    "start:lab1:final": "pm2 start pm2.lab1-final.config.cjs",
     "pm2": "pm2",
     "http": "node demos/complete/packages/fullstack-demo-http-client/index.js",
     "react:dev:complete": "vite serve demos/complete/packages/frontend-react",
