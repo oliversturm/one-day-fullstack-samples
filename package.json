@@ -53,14 +53,18 @@
   "scripts": {
     "start:complete": "pm2 start pm2.complete.config.cjs",
     "start:block1": "pm2 start pm2.block1.config.cjs",
+    "start:block3": "pm2 start pm2.block3.config.cjs",
     "start:lab1:start": "pm2 start pm2.lab1-start.config.cjs",
     "start:lab1:final": "pm2 start pm2.lab1-final.config.cjs",
     "pm2": "pm2",
+    "pm2-stop": "pm2 stop all",
     "http": "node demos/complete/packages/fullstack-demo-http-client/index.js",
     "react:dev:complete": "vite serve demos/complete/packages/frontend-react",
     "svelte:dev:complete": "PREFIX=demos/complete CACHE_POSTFIX=demos-complete svelte-kit dev",
     "react:dev:block2": "vite serve demos/block2/packages/frontend-react",
-    "svelte:dev:block2": "PREFIX=demos/block2 CACHE_POSTFIX=demos-block2 svelte-kit dev"
+    "svelte:dev:block2": "PREFIX=demos/block2 CACHE_POSTFIX=demos-block2 svelte-kit dev",
+    "react:dev:block3": "vite serve demos/block3/packages/frontend-react",
+    "svelte:dev:block3": "PREFIX=demos/block3 CACHE_POSTFIX=demos-block3 svelte-kit dev"
   },
   "type": "module",
   "browserslist": {

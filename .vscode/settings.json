@@ -18,6 +18,18 @@
     "demos/block1/packages/readmodel-customers",
     "demos/block1/packages/readmodel-orders",
 
+    "demos/block2/packages/frontend-react",
+    "demos/block2/packages/frontend-svelte",
+
+    "demos/block3/packages/command-processor",
+    "demos/block3/packages/fullstack-demo-command-processor",
+    "demos/block3/packages/fullstack-demo-logger",
+    "demos/block3/packages/fullstack-demo-read-model",
+    "demos/block3/packages/readmodel-customers",
+    "demos/block3/packages/readmodel-orders",
+    "demos/block3/packages/frontend-react",
+    "demos/block3/packages/frontend-svelte",
+
     "labs/lab1/start/packages/command-processor",
     "labs/lab1/start/packages/fullstack-demo-command-processor",
     "labs/lab1/start/packages/fullstack-demo-logger",

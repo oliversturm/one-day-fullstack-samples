@@ -1,6 +1,7 @@
 import React from 'react';
 import AppFrame from './components/AppFrame';
 import CustomersView from './views/CustomersView';
+// eslint-disable-next-line no-unused-vars
 import AboutView from './views/AboutView';
 
 const App = () => {
