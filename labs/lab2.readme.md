@@ -1,49 +1,43 @@
-# One Day Fullstack Demo Block 2 Workshop - Start
-
-....TODO - leave a choice of working with the React or the Svelte app
+# One Day Fullstack Workshop -- Demo Block 2
 
 This project state is prepared for you to check out the details of the previous presentation block.
 
 ## Instructions
 
-- Clone the repository to your local machine
+This lab is all about exploration of the basic frontend projects before they will be extended to fit in with the backend in the following step. You can choose to focus on either the React or the Svelte project, or spend time with both and compare the implementations. Below you can find some hints for interesting aspects of both samples.
+
+### React Frontend
+
+Run the project using this command:
 
 ```shell
-git clone https://github.com/oliversturm/one-day-fullstack-block2-B.git
+npm run react:dev:block2
 ```
 
-- Navigate to the `frontend` package directory
+* `main.jsx` is the entry point with the top-level rendering structure
+* `App.jsx` refers to the `AppFrame` with its navigation buttons (currently unused)
+* You can swap views manually by editing `App.jsx`.
+* The views are components stored in the `views` folder. 
+* `components/CustomerTable.jsx` and `components/OrderTable.jsx` are the overview components that will display details of the customer and order data in the system.
+* `components/CustomerForm.jsx` and `components/OrderForm.jsx` use *Formik* elements to set up data entry forms
+* `components/Button.jsx` uses a basic hook (`useMemo`) to precompute the `className` attribute for the button
+* `components/Table.jsx` includes several helper components to format table elements with consistent Tailwind classes. Note the use of `children`.
+* `components/TextInput.jsx` contains a similar styled text editor, note the use of the spread operator for the `props`
+* `components/icons/RefreshIcon.jsx` is a component that renders SVG content
+
+### Svelte Frontend
+
+Run the project using this command:
 
 ```shell
-cd packages/frontend
+npm run svelte:dev:block2
 ```
 
-- Install dependencies
-
-```shell
-npm install
-```
-
-- Start app
-
-```shell
-npm start
-```
-
-- Start Storybook
-
-```shell
-npm run storybook
-```
-
-## Task
-
-The `OrderForm` is incomplete in this state, it lacks the `Save` and `Cancel` buttons you can find in the `CustomerForm`.
-
-- Check out the situation in Storybook
-- Add the two missing buttons to the `OrderForm`
-- Update the code in `OrderForm.stories.js` so that the functionality of the `Cancel` button can be tested just like for the `CustomerForm`.
-
-The `OrderTable` is equally incomplete, you can see in Storybook that it doesn't display the data passed through from `OrderTable.stories.js`.
-
-- Add the missing elements to the `OrderTable` component to show the data
+* `src/routes/index.svelte` is the starting page, and `about.svelte` in the same folder is the only other page in the app at this point
+* Both are rendered using the `src/routes/__layout.svelte` layout component
+* The layout component uses the `<slot />` tag to include the content from the individual routed pages
+* `src/lib/Button.svelte` is a button component with a similar implementation to the React one. It uses a Svelte *reactive assignment* for the `buttonClass` (note the `$` label)
+* `src/lib/CustomerTable.svelte`, `.../OrderTable.svelte`, `.../CustomerForm.svelte` and `.../OrderForm.svelte` are similar to their React equivalents
+* `src/lib/TextInput.svelte` uses `bind:value` for bidirectional data binding of the `value` property. It also uses `on:input` to pass through any `input` events to any event handler on the level of the parent component.
+* The components in `src/lib/table` apply consistent Tailwind classes to table elements. They also use `<slot />` to render content passed from the outside.
+* `src/lib/icons/RefreshIcon.svelte` is a component that renders SVG content
