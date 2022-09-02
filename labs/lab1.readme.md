@@ -28,12 +28,28 @@ Alternatively, you can use a local MongoDB instance. Of course this can be insta
 docker run -p 27017:27017 --rm --name mongo mongo:latest
 ```
 
-**Note** that you must use different connection para
+This repository contains extra start configurations for the "local MongoDB" scenario. The config files include the string `localmongo`, and so do the `package.json` script names. For example, these are the two start commands for the Block 1 Demo project:
 
-**Note that most attendees of the workshop will use the same demo database. This means that aggregate IDs will overlap, and you will also see test data created by others when you access the read models. Make sure to modify the sample instructions below to use your own unique test IDs and values.**
+```shell
+npm run start:block
+npm run start:block1:localmongo
+```
 
+Finally, to connect to your local MongoDB instance with `mongosh`, the command is also different. For comparison:
+
+```shell
+# Using shared instance, as below:
+mongosh "mongodb+srv://cluster0.mejvj0u.mongodb.net/events" --apiVersion 1 --username <user>
+
+# Using local MongoDB instance:
+mongosh "mongodb://127.0.0.1/events" --apiVersion 1
+```
+
+Of course you can use the same techniques to make the samples use any other MongoDB instance. In that case, please copy and edit config files as required.
 
 ### Configure MongoDB authentication -- only needed once per workshop
+
+**Note** this step is not required of you use the "local MongoDB" setup described above.
 
 Create the file `.user-auth.json` in the root folder of the repository and edit it to contain the following structure. 
 
