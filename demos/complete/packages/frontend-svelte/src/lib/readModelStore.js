@@ -32,7 +32,9 @@ const applyChange = (data, changeInfo) => {
 
     case 'updateRow':
       return data.map(row =>
-        row.id === changeInfo.details.id ? changeInfo.details : row
+        row.id === changeInfo.details.id
+          ? { ...row, ...changeInfo.details }
+          : row
       );
 
     case 'deleteRow':
@@ -59,6 +61,12 @@ export const readModelStore = (
 ) => {
   const store = readable({ data: [], isEmpty: true }, set => {
     query(endpoint)(readModelName, resolverName, params).then(loadedData => {
+      // console.log(
+      //   `Read model '${readModelName}' on resolver '${resolverName}' for endpoint '${endpoint}' ('${endpointName}') used params <${JSON.stringify(
+      //     params
+      //   )}> and loaded data`,
+      //   loadedData
+      // );
       let data = loadedData;
       set(createData(data));
 
@@ -73,11 +81,23 @@ export const readModelStore = (
           if (changeInfo.changeKind === 'all') {
             query(endpoint)(readModelName, resolverName, params).then(
               newData => {
+                // console.log(
+                //   `Read model '${readModelName}' on resolver '${resolverName}' for endpoint '${endpoint}' ('${endpointName}') used params <${JSON.stringify(
+                //     params
+                //   )}>, received type 'all' change notification and loaded data`,
+                //   newData
+                // );
                 data = newData;
                 set(createData(data));
               }
             );
           } else {
+            // console.log(
+            //   `Read model '${readModelName}' on resolver '${resolverName}' for endpoint '${endpoint}' ('${endpointName}') used params <${JSON.stringify(
+            //     params
+            //   )}>, received change notification`,
+            //   changeInfo
+            // );
             data = applyChange(data, changeInfo);
             set(createData(data));
           }
