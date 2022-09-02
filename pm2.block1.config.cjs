@@ -1,5 +1,5 @@
 // Check environment vars first - that can cover certain local
-// startup scenarios, but also CodeSandbox with its secrets.
+// startup scenarios.
 let { MONGODB_USER, MONGODB_PWD } = process.env;
 
 // Try to load a local file next. This is excluded from git
