@@ -16,16 +16,10 @@ const OrdersView = () => {
 
   const { data, loadRequired } = useSelector(({ ordersView }) => ordersView);
 
-  const readModelSpec = useMemo(
-    () => ({
-      endpoint: 'orders',
-      readModel: 'overview',
-      resolver: 'all',
-      params: {},
-    }),
-    []
-  );
-  useReadModel(readModelSpec, dataLoaded, loadRequired);
+  // TODO, lab3 task: add code to use the read model.
+  // Check out how this is done in CustomersView.jsx
+  // and use the same approach - everything is prepared,
+  // there are only two instructions missing.
 
   return <OrderTable data={data} />;
 };

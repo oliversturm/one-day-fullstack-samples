@@ -10,7 +10,7 @@
   export let store;
 </script>
 
-{#if $store.isEmpty}
+{#if !$store || $store.isEmpty}
   <Working />
 {:else}
   <Table>

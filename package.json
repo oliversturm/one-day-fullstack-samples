@@ -61,6 +61,8 @@
     "start:lab1:start:localmongo": "pm2 start pm2.lab1-start.localmongo.config.cjs",
     "start:lab1:final": "pm2 start pm2.lab1-final.config.cjs",
     "start:lab1:final:localmongo": "pm2 start pm2.lab1-final.localmongo.config.cjs",
+    "start:lab3:start": "pm2 start pm2.lab3-start.config.cjs",
+    "start:lab3:start:localmongo": "pm2 start pm2.lab3-start.localmongo.config.cjs",
     "start:lab3:final": "pm2 start pm2.lab3-final.config.cjs",
     "start:lab3:final:localmongo": "pm2 start pm2.lab3-final.localmongo.config.cjs",
     "pm2": "pm2",
