@@ -1,6 +1,6 @@
 # One Day Fullstack Workshop -- Demo Block 2
 
-This project state is prepared for you to check out the details of the previous presentation block.
+This project state is prepared for you to check out the details of the previous presentation block. The lab uses the `block2` project state, there is no dedicated `lab2` folder.
 
 ## Instructions
 
