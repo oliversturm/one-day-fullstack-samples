@@ -18,6 +18,14 @@ Install all dependencies:
 npm install
 ```
 
+### Install the MongoDB Shell -- only needed once per workshop
+
+To examine the content of the demo database during the practice labs, the use of the tool `mongosh` is recommended. Please install it on your machine using an `npm` command:
+
+```shell
+npm install -g mongosh
+```
+
 ### Consider using a local MongoDB instance -- only needed once per workshop
 
 By default, samples and lab projects are configured to use a shared demo database in the cloud. Performance may be limited and data may overlap, so you need to make sure you modify all sample instructions to use your unique test IDs and values.
@@ -60,14 +68,6 @@ Create the file `.user-auth.json` in the root folder of the repository and edit 
   "MONGODB_USER": "<user>",
   "MONGODB_PWD": "<password>"
 }
-```
-
-### Install the MongoDB Shell -- only needed once per workshop
-
-To examine the content of the demo database during the practice labs, the use of the tool `mongosh` is recommended. Please install it on your machine using an `npm` command:
-
-```shell
-npm install -g mongosh
 ```
 
 ### Observe the behavior of the sample application
