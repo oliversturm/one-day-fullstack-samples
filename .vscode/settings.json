@@ -44,5 +44,23 @@
     "labs/lab1/final/packages/readmodel-customers",
     "labs/lab1/final/packages/readmodel-orders",
 
+    "labs/lab3/start/packages/command-processor",
+    "labs/lab3/start/packages/fullstack-demo-command-processor",
+    "labs/lab3/start/packages/fullstack-demo-logger",
+    "labs/lab3/start/packages/fullstack-demo-read-model",
+    "labs/lab3/start/packages/readmodel-customers",
+    "labs/lab3/start/packages/readmodel-orders",
+    "labs/lab3/start/packages/frontend-react",
+    "labs/lab3/start/packages/frontend-svelte",
+
+    "labs/lab3/final/packages/command-processor",
+    "labs/lab3/final/packages/fullstack-demo-command-processor",
+    "labs/lab3/final/packages/fullstack-demo-logger",
+    "labs/lab3/final/packages/fullstack-demo-read-model",
+    "labs/lab3/final/packages/readmodel-customers",
+    "labs/lab3/final/packages/readmodel-orders",
+    "labs/lab3/final/packages/frontend-react",
+    "labs/lab3/final/packages/frontend-svelte",
+
   ]
 }
