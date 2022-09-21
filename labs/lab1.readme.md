@@ -18,6 +18,8 @@ Install all dependencies:
 npm install
 ```
 
+**Note**: in case you are on Windows and you receive an error about a missing Python, please install Python from the Microsoft Store. Then delete `C:\Users\<you>\AppData\Local\node-gyp` and try again.
+
 ### Install the MongoDB Shell -- only needed once per workshop
 
 To examine the content of the demo database during the practice labs, the use of the tool `mongosh` is recommended. Please install it on your machine using an `npm` command:
