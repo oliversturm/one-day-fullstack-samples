@@ -41,6 +41,7 @@
     "@sveltejs/adapter-auto": "1.0.0-next.50",
     "@sveltejs/kit": "1.0.0-next.348",
     "@sveltejs/vite-plugin-svelte": "1.0.0-next.47",
+    "cross-env": "7.0.3",
     "eslint": "8.17.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-react": "7.30.0",
@@ -70,15 +71,15 @@
     "pm2-stop": "pm2 stop all",
     "http": "node demos/complete/packages/fullstack-demo-http-client/index.js",
     "react:dev:complete": "vite serve demos/complete/packages/frontend-react",
-    "svelte:dev:complete": "PREFIX=demos/complete CACHE_POSTFIX=demos-complete svelte-kit dev",
+    "svelte:dev:complete": "cross-env PREFIX=demos/complete CACHE_POSTFIX=demos-complete svelte-kit dev",
     "react:dev:block2": "vite serve demos/block2/packages/frontend-react",
-    "svelte:dev:block2": "PREFIX=demos/block2 CACHE_POSTFIX=demos-block2 svelte-kit dev",
+    "svelte:dev:block2": "cross-env PREFIX=demos/block2 CACHE_POSTFIX=demos-block2 svelte-kit dev",
     "react:dev:block3": "vite serve demos/block3/packages/frontend-react",
-    "svelte:dev:block3": "PREFIX=demos/block3 CACHE_POSTFIX=demos-block3 svelte-kit dev",
+    "svelte:dev:block3": "cross-env PREFIX=demos/block3 CACHE_POSTFIX=demos-block3 svelte-kit dev",
     "react:dev:lab3:start": "vite serve labs/lab3/start/packages/frontend-react",
-    "svelte:dev:lab3:start": "PREFIX=labs/lab3/start CACHE_POSTFIX=labs-lab3-start svelte-kit dev",
+    "svelte:dev:lab3:start": "cross-env PREFIX=labs/lab3/start CACHE_POSTFIX=labs-lab3-start svelte-kit dev",
     "react:dev:lab3:final": "vite serve labs/lab3/final/packages/frontend-react",
-    "svelte:dev:lab3:final": "PREFIX=labs/lab3/final CACHE_POSTFIX=labs-lab3-final svelte-kit dev"
+    "svelte:dev:lab3:final": "cross-env PREFIX=labs/lab3/final CACHE_POSTFIX=labs-lab3-final svelte-kit dev"
   },
   "type": "module",
   "browserslist": {
