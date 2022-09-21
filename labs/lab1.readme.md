@@ -151,6 +151,8 @@ npm run pm2 -- kill
 rm -rf ~/.pm2
 ```
 
+**Note**: on Windows, you'll find the folder `.pm2` in `C:\Users\<you>`.
+
 ## Lab 1 -- Task
 
 The source code of this lab starting point is in `labs/lab1/start`. You can find the complete lab in `labs/lab1/final`. Note that both project states can be started using directly using npm commands. Don't forget to stop and clean up previous versions when you change projects!
