@@ -53,14 +53,14 @@ module.exports = {
     {
       name: 'frontend-react',
       cwd: '.',
-      script: 'npm',
-      args: 'run react:dev:lab3:final',
+      script: 'node_modules/vite/bin/vite.js',
+      args: 'serve labs/lab3/final/packages/frontend-react',
     },
     {
       name: 'frontend-svelte',
       cwd: '.',
-      script: 'npm',
-      args: 'run svelte:dev:lab3:final',
+      script: 'node_modules/cross-env/src/bin/cross-env.js',
+      args: 'PREFIX=labs/lab3/final CACHE_POSTFIX=labs-lab3-final svelte-kit dev',
     },
   ],
 };

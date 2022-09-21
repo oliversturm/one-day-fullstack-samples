@@ -53,14 +53,14 @@ module.exports = {
     {
       name: 'frontend-react',
       cwd: '.',
-      script: 'npm',
-      args: 'run react:dev:block3',
+      script: 'node_modules/vite/bin/vite.js',
+      args: 'serve demos/block3/packages/frontend-react',
     },
     {
       name: 'frontend-svelte',
       cwd: '.',
-      script: 'npm',
-      args: 'run svelte:dev:block3',
+      script: 'node_modules/cross-env/src/bin/cross-env.js',
+      args: 'PREFIX=demos/block3 CACHE_POSTFIX=demos-block3 svelte-kit dev',
     },
   ],
 };

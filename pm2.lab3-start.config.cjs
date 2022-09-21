@@ -73,14 +73,14 @@ if (MONGODB_USER && MONGODB_PWD) {
       {
         name: 'frontend-react',
         cwd: '.',
-        script: 'npm',
-        args: 'run react:dev:lab3:start',
+        script: 'node_modules/vite/bin/vite.js',
+        args: 'serve labs/lab3/start/packages/frontend-react',
       },
       {
         name: 'frontend-svelte',
         cwd: '.',
-        script: 'npm',
-        args: 'run svelte:dev:lab3:start',
+        script: 'node_modules/cross-env/src/bin/cross-env.js',
+        args: 'PREFIX=labs/lab3/start CACHE_POSTFIX=labs-lab3-start svelte-kit dev',
       },
     ],
   };

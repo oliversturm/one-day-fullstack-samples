@@ -65,14 +65,14 @@ module.exports = {
     {
       name: 'frontend-react',
       cwd: '.',
-      script: 'npm',
-      args: 'run react:dev:complete',
+      script: 'node_modules/vite/bin/vite.js',
+      args: 'serve demos/complete/packages/frontend-react',
     },
     {
       name: 'frontend-svelte',
       cwd: '.',
-      script: 'npm',
-      args: 'run svelte:dev:complete',
+      script: 'node_modules/cross-env/src/bin/cross-env.js',
+      args: 'PREFIX=demos/complete CACHE_POSTFIX=demos-complete svelte-kit dev',
     },
   ],
 };
